@@ -7,6 +7,10 @@ class Singleton {
     }
 }
 
-const singleton1 = Singleton.getInstance();
-const singleton2 = Singleton.getInstance();
-console.log(singleton1 === singleton2);
+const instanceOne = Singleton.getInstance();
+Object.freeze(instanceOne);
+
+const instanceTwo = Singleton.getInstance();
+Object.freeze(instanceTwo);
+
+console.log(instanceOne === instanceTwo);
